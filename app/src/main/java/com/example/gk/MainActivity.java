@@ -21,16 +21,19 @@ public class MainActivity extends AppCompatActivity {
     Button btnSignUp;
     TextView tvSignIn;
     FirebaseAuth mFirebaseAuth;
+
     private FirebaseAuth.AuthStateListener mAuthStateListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         final FirebaseAuth mFirebaseAuth = FirebaseAuth.getInstance();
         emailId= findViewById(R.id.editText);
         password= findViewById(R.id.editText2);
         btnSignUp=findViewById(R.id.button);
-        tvSignIn=findViewById(R.id.textview);
+        tvSignIn=findViewById(R.id.textView);
+
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
